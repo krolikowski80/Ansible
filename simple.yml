@@ -2,21 +2,19 @@
 - hosts: servers
   become: yes
   tasks:
-  - name: install MC
-    apt:
-      name: mc
-      state: latest
-      update_cache: yes
-  - name: install openssl
-    apt:
-      name: openssl
-      state: present
-      update_cache: yes
-  - name: create a file
-    file:
-      name: /home/krolik/test.txt
-      state: touch
-  - name:
-    lineinfile:
-      line: "Przykladowy tekst"
-      path: /home/krolik/test.txt
+    - name: install MC
+      apt:
+        update_cache: yes
+        name:
+          - mc
+          - openssl
+        state: latest
+
+    - name: create a file
+      file:
+        name: /home/krolik/test.txt
+        state: touch
+    - name:
+      lineinfile:
+        line: "Przykladowy tekst"
+        path: /home/krolik/test.txt
