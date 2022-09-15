@@ -9,7 +9,6 @@
           - mc
           - openssl
         state: latest
-
     - name: create a file
       file:
         name: /home/krolik/test.txt
