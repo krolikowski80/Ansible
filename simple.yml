@@ -2,7 +2,7 @@
 - hosts: servers
   become: yes
   tasks:
-    - name: install MC
+    - name: install MC and openssl
       apt:
         update_cache: yes
         name:
