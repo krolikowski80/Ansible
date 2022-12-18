@@ -1,8 +1,9 @@
 --- # Bootstrap servers
 - hosts: servers
+  remote_user: krolik
   become: yes
   tasks:
-    - name: install MC and openssl
+    - name: install openssl with var
       apt:
         update_cache: yes
         name: "{{ target_app }}"
