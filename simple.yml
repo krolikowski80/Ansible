@@ -16,4 +16,4 @@
     - name:
       lineinfile:
         line: "Przykladowy tekst"
-        path: /home/krolik/test.txt
+        path: /home/krolik/test.txt 
