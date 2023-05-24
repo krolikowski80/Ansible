@@ -1,2 +1,2 @@
 # Ansible
-Kurs Ansible
+Kurs Ansible 2.0
