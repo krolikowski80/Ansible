@@ -1,0 +1,8 @@
+- name: Test
+  hosts: all
+  tasks:
+    - name: execute command "date"
+      command: date
+    - name: Display resolv.conv contents
+      command: cat  /etc/resolv.conf
+ 
