@@ -1,0 +1,16 @@
+---
+- name: Aktualizacja systemu Ubuntu
+  hosts: all
+  become: yes
+  tasks:
+    - name: Aktualizacja listy pakietów
+      apt:
+        update_cache: yes
+      tags: update
+
+    - name: Instalacja dostępnych aktualizacji
+      apt:
+        upgrade: yes
+        autoremove: yes
+        autoclean: yes
+      tags: update
